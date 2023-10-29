@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  body {
+    background-color: rgb(247, 247, 247);
+    height: 100vh;
+    width: 100%;
+    header {
+      margin: 20px;
+      height: 76px;
+      nav {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        .left {
+          display: flex;
+          vertical-align: baseline;
+          position: absolute;
+          left: 100px;
+          left: 20px;
+          div.circle {
+            width: 25px;
+            height: 25px;
+            background-color: rgb(245, 191, 79);
+            border-radius: 50%;
+            margin: 0 7px;
+          }
+          .phil {
+            margin: 0 7px;
+            font-size: 22px;
+            font-weight: 500;
+          }
+          .web {
+            margin: 0 7px;
+            font-size: 16px;
+            padding: 6px 0 0 0;
+            font-weight: 200;
+          }
+        }
+        .right {
+          display: flex;
+          position: absolute;
+          right: 100px;
+          font-weight: 200;
+          right: 20px;
+          a + a:before {
+            content: "|";
+            color: #000;
+            margin-right: 10px;
+          }
+          a {
+            text-decoration: none;
+            color: #000;
+            padding: 0 10px;
+            transition: 0.5s;
+          }
+          a + a {
+            padding-left: 0;
+          }
+          a:hover {
+            color: #ad6103;
+          }
+        }
+      }
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      margin: 100px 0 0 0;
+      div.img {
+        width: 400px;
+        height: 400px;
+        margin: 15px;
+        img {
+          width: 100%;
+        }
+      }
+      div.selfIntro {
+        width: 420px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+        h1 {
+          font-size: 100px;
+          margin: 0 10px;
+        }
+        p.bite {
+          font-size: 22px;
+          font-weight: 400;
+          margin: 0 10px;
+        }
+        p.intro {
+          font-weight: 200;
+          margin: 0 10px;
+        }
+      }
+      div.threeCircle {
+        display: flex;
+        width: 450px;
+        height: 140px;
+        margin: 50px 0 0 0;
+        justify-content: space-between;
+        > * {
+          width: 140px;
+          height: 140px;
+          background-color: rgb(277, 166, 58);
+          border-radius: 50%;
+          position: relative;
+          margin: 0 auto;
+          transition: 0.5s;
+          a {
+            position: absolute;
+            top: 50%; //box左上角的點會在正中間
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            font-size: 1.15rem;
+          }
+        }
+        > *:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 2px solid black;
+          left: -2px;
+          top: -2px;
+
+          border-radius: 50%;
+        }
+        :nth-child(2) {
+          background-color: rgb(235, 78, 54);
+        }
+        :nth-child(3) {
+          background-color: rgb(149, 214, 217);
+        }
+        > *:hover {
+          background-color: rgb(247, 247, 247);
+          border-radius: 1px solid black;
+        }
+        // .c1 {
+        //   width: 140px;
+        //   height: 140px;
+        //   background-color: rgb(277, 166, 58);
+        //   border-radius: 50%;
+        //   position: relative;
+        //   margin: 0 auto;
+        //   a {
+        //     position: absolute;
+        //     top: 50%; //box左上角的點會在正中間
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-decoration: none;
+        //     color: #000;
+        //     font-weight: 600;
+        //     font-size: 1.15rem;
+        //   }
+        // }
+        // .c2 {
+        //   width: 140px;
+        //   height: 140px;
+        //   background-color: rgb(235, 78, 54);
+        //   border-radius: 50%;
+        //   position: relative;
+
+        //   margin: 0 auto;
+        //   a {
+        //     position: absolute;
+        //     top: 50%; //box左上角的點會在正中間
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-decoration: none;
+        //     color: #000;
+        //     font-weight: 600;
+        //     font-size: 1.15rem;
+        //   }
+        // }
+        // .c3 {
+        //   width: 140px;
+        //   height: 140px;
+        //   background-color: rgb(149, 214, 217);
+        //   border-radius: 50%;
+        //   position: relative;
+
+        //   margin: 0 auto;
+        //   a {
+        //     position: absolute;
+        //     top: 50%; //box左上角的點會在正中間
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-decoration: none;
+        //     color: #000;
+        //     font-weight: 600;
+        //     font-size: 1.15rem;
+        //   }
+        // }
+      }
+    }
+
+    footer {
+      margin: 200px 20px 100px 20px;
+      padding: 50px 0 100px 0;
+      div.line {
+        display: block;
+        border-top: 1px solid #ccc;
+        width: 100%;
+      }
+      div.imformation {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        .phone {
+          p:nth-child(1) {
+            font-size: 18px;
+            font-weight: 700;
+          }
+          p + p {
+            font-size: 16px;
+            line-height: 1.4em;
+            font-weight: 200;
+          }
+        }
+        .email {
+          p:nth-child(1) {
+            font-size: 18px;
+            font-weight: 700;
+          }
+          p + p {
+            font-size: 16px;
+            line-height: 1.4em;
+            font-weight: 200;
+          }
+        }
+        .follow {
+          p:nth-child(1) {
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .icon a {
+            text-decoration: none;
+            color: rgb(45, 100, 188);
+          }
+        }
+        .copyright {
+          position: relative;
+          p {
+            line-height: 1.4em;
+            font-size: 13px;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./_project.scss";

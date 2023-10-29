@@ -1,0 +1,49 @@
+.project {
+  width: 1100px;
+  margin: 0 auto;
+  h1.projectH1 {
+    margin-bottom: 100px;
+    font-size: 2.5rem;
+  }
+
+  .section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    .introduction {
+      width: 500px;
+      line-height: 1.7em;
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 450;
+      }
+      p {
+        font-weight: 200;
+      }
+    }
+    .projectImg {
+      width: 500px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .section.p3.action,
+  .section.p4.action {
+    display: none;
+  }
+  .section.p3,
+  .section.p4 {
+    display: flex;
+  }
+  .projectButton {
+    text-align: center;
+    margin-top: 100px;
+    button {
+      background-color: rgb(247, 247, 247);
+      border: none;
+      cursor: pointer;
+      font-size: 1.15rem;
+    }
+  }
+}
